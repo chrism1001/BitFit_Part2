@@ -23,6 +23,8 @@ class ExerciseFragment: Fragment(), OnListFragmentInteractionListener {
     }
 
     private fun updateAdapter(recyclerView: RecyclerView) {
-        TODO("TO BE COMPLETED")
+        val application = ExerciseApplication().db.exersiceDao()
+        val exercises: List<ExerciseEntity> = application.getAll()
+        recyclerView.adapter = context?.let { ExerciseAdapter(it, exercises, this)}
     }
 }

@@ -20,6 +20,7 @@ class ExerciseAdapter(
         val repetitions: TextView = itemView.findViewById<View>(R.id.repetitions) as TextView
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.fragment_exercise, parent, false)

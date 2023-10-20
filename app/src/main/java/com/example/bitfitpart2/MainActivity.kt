@@ -4,9 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
+val EXERCISE_INPUT = "EXERCISE_INPUT"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         var button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
+            this.startActivity(intent)
         }
     }
 }
