@@ -10,5 +10,5 @@ data class ExerciseEntity (
     @ColumnInfo(name = "name") var name: String? = null,
     @ColumnInfo(name = "date") var date: String? = null,
     @ColumnInfo(name = "sets") var sets: Int = 0,
-    @ColumnInfo(name = "reps") var repitions: Int = 0
+    @ColumnInfo(name = "reps") var repetitions: Int = 0
 )

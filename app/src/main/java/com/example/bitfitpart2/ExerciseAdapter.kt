@@ -32,7 +32,7 @@ class ExerciseAdapter(
         holder.exerciseName.text = exercise.name
         holder.exerciseDate.text = exercise.date
         holder.setsNumber.text = exercise.sets.toString()
-        holder.repetitions.text = exercise.repetions.toString()
+        holder.repetitions.text = exercise.repetitions.toString()
     }
 
     override fun getItemCount(): Int {
