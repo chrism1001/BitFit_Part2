@@ -17,7 +17,7 @@ class ExerciseAdapter(
         val exerciseName: TextView = itemView.findViewById<View>(R.id.exercise_name) as TextView
         val exerciseDate: TextView = itemView.findViewById<View>(R.id.date) as TextView
         val setsNumber: TextView = itemView.findViewById<View>(R.id.sets) as TextView
-        val repititions: TextView = itemView.findViewById<View>(R.id.repititions) as TextView
+        val repetitions: TextView = itemView.findViewById<View>(R.id.repetitions) as TextView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
@@ -27,7 +27,12 @@ class ExerciseAdapter(
     }
 
     override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val exercise = exercises[position]
+
+        holder.exerciseName.text = exercise.name
+        holder.exerciseDate.text = exercise.date
+        holder.setsNumber.text = exercise.sets.toString()
+        holder.repetitions.text = exercise.repetions.toString()
     }
 
     override fun getItemCount(): Int {
