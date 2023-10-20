@@ -5,10 +5,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "exercise_table")
-class ExerciseEntity {
-    @PrimaryKey(autoGenerate = true) val id: Long = 0
-    @ColumnInfo(name = "name") val name: String? = null
-    @ColumnInfo(name = "date") val date: String? = null
-    @ColumnInfo(name = "sets") val sets: Int = 0
-    @ColumnInfo(name = "reps") val repitions: Int = 0
-}
+data class ExerciseEntity (
+    @PrimaryKey(autoGenerate = true) var id: Long = 0,
+    @ColumnInfo(name = "name") var name: String? = null,
+    @ColumnInfo(name = "date") var date: String? = null,
+    @ColumnInfo(name = "sets") var sets: Int = 0,
+    @ColumnInfo(name = "reps") var repitions: Int = 0
+)

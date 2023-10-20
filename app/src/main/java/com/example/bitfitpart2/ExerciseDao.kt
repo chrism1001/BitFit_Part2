@@ -12,5 +12,7 @@ interface ExerciseDao {
 
     @Insert
     fun insertALL(exercises: List<ExerciseEntity>)
+
+    @Query("DELETE FROM exercise_table")
     fun deleteAll()
 }
